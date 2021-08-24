@@ -1,7 +1,7 @@
 // Business Logic for Ticket ---------
-function Ticket() {
-  this.selections = {};
-}
+// function Ticket() {
+//   this.selections = {};
+// }
 
 function Selection(movie, age, time) {
   this.movie = movie;
@@ -47,7 +47,7 @@ Selection.prototype.getTime = function () {
 
 // UI Logic for Ticket ---------
 
-let ticket = new Ticket();
+// let ticket = new Ticket();
 function displayPrice(newSelection) {
   $(".movie").html(newSelection.getPrice());
   $(".age").html(newSelection.getAge());
