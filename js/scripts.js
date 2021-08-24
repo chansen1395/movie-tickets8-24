@@ -1,7 +1,6 @@
-// Business Logic for AddressBook ---------
+// Business Logic for Ticket ---------
 function Ticket() {
   this.selections = {};
-  // this.currentId = 0;
 }
 
 function Selection(movie, age, time) {
@@ -46,6 +45,8 @@ Selection.prototype.getTime = function () {
 }
 
 
+// UI Logic for Ticket ---------
+
 let ticket = new Ticket();
 function displayPrice(newSelection) {
   $(".movie").html(newSelection.getPrice());
@@ -68,19 +69,3 @@ $(document).ready(function () {
     displayPrice(newSelection);
   });
 });
-
-
-// var newSelection = new Selection("Star Wars", 12, "10:00");
-
-
-// const something = {1:"a",2:"b"};
-
-// function displayContactDetails(addressBookToDisplay) {
-  //   let contactsList = $("ul#contacts");
-  //   let htmlForContactInfo = "";
-  //   Object.keys(addressBookToDisplay.contacts).forEach(function (key) {
-//     const contact = addressBookToDisplay.findContact(key);
-//     htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
-//   });
-//   contactsList.html(htmlForContactInfo);
-// }
